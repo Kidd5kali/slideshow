@@ -1,0 +1,113 @@
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Kidd5kali (http://jsbin.com/wunosih/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+  <style id="jsbin-css">
+.mySlides {
+  max-width: 100%;
+  max-height: 480px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cornsilk;
+    font-family: 'Yatra One', cursive;
+}
+#mukodj {
+    float: left;
+}
+#mukodj a, .dropbtn {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#mukodj a:hover, .dropdown:hover .dropbtn {
+    background-color: burlywood;
+}
+#mukodj.dropdown {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body {
+    background-image: url(https://ketuba.files.wordpress.com/2011/06/egret.jpg)
+}
+</style>
+</head>
+<body>
+  <ul class="navbar">
+            <li id="mukodj"><a href="https://kidd5kali.github.io/otodikSebesseg/">Kezdőlap</a></li>
+            <li id="mukodj" class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Történet</a>
+                <div class="dropdown-content">
+                    <a href="https://kidd5kali.github.io/Tomi/">Az autózás történelme</a>
+                    <a href="https://kidd5kali.github.io/Kristof/">Híres emberek híres autói</a>
+                </div>
+            </li>
+            <li id="mukodj"><a href="https://kidd5kali.github.io/Mate/">Autókereső</a></li>
+            <li id="mukodj"><a href="https://kidd5kali.github.io/Pali/">Kapcsolat</a></li>
+            <li id="mukodj"><a href="http://yellowroad.hu/">Powered by</a></li>
+        </ul>
+<br><br><br>  
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="http://i.imgur.com/cJrZUQT.jpg">
+  <img class="mySlides" src="http://i.imgur.com/X1bBuhR.jpg">
+  <img class="mySlides" src="http://i.imgur.com/sRWpGfQ.jpg" >
+  <img class="mySlides" src="http://i.imgur.com/OBhBJHK.jpg" >
+  <img class="mySlides" src="http://i.imgur.com/PXzO5TJ.jpg">
+  <img class="mySlides" src="http://i.imgur.com/hhasc8g.jpg">
+  <img class="mySlides" src="http://i.imgur.com/0zNHpLO.jpg">
+  <img class="mySlides" src="http://i.imgur.com/cMZGu3J.jpg">
+  <img class="mySlides" src="http://i.imgur.com/vHq5Lw2.jpg">
+  <img class="mySlides" src="http://i.imgur.com/V2kw0fq.jpg">
+  </div>
+<script id="jsbin-javascript">
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 1800); // Change image every 2 seconds
+}
+</script>
+</body>
